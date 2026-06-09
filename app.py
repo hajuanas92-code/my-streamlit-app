@@ -20,12 +20,14 @@ text = [
      "system_response": "I could not locate an answer to this in our current FAQs. Please visit our website's [Store Locator](https://example.com) page to check exact operating hours."
    }
  ]
+import os
 import streamlit as st
 import pandas as pd
 import json
 import chromadb
 from transformers import pipeline
 
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 st.title("Welcome to ChatBot Arena")
 df = pd.read_json(json.dumps(text))
 client = chromadb.Client()
