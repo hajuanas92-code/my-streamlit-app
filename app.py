@@ -1,4 +1,3 @@
-%%writefile my_app.py
 text = [
   {
      "user_query": "Is there a specific dress code for attending the company annual general meeting?",
@@ -21,10 +20,10 @@ text = [
      "system_response": "I could not locate an answer to this in our current FAQs. Please visit our website's [Store Locator](https://example.com) page to check exact operating hours."
    }
  ]
+import streamlit as st
 import pandas as pd
 import json
 import chromadb
-import streamlit as st
 from transformers import pipeline
 
 st.title("Welcome to ChatBot Arena")
